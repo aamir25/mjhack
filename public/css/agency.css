@@ -444,7 +444,8 @@ header.masthead {
 
 section#register {
   background-color: #222222;
-  background-image: url("");
+  background-image: url("../img/logo.png");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
   section#register .section-heading {
@@ -463,24 +464,24 @@ section#register {
     box-shadow: none; }
   section#register ::-webkit-input-placeholder {
     font-weight: 700;
-    color: #eeeeee;
+    color: #c4c4c4;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase; }
   section#register :-moz-placeholder {
     font-weight: 700;
-    color: #eeeeee;
+    color: #c4c4c4;
     /* Firefox 18- */
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase; }
   section#register ::-moz-placeholder {
     font-weight: 700;
-    color: #eeeeee;
+    color: #c4c4c4;
     /* Firefox 19+ */
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase; }
   section#register :-ms-input-placeholder {
     font-weight: 700;
-    color: #eeeeee;
+    color: #c4c4c4;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase; }
   section#register .text-danger {

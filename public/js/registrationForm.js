@@ -23,7 +23,7 @@ registerBtn.addEventListener('click', submitForm);
 
 //EVENT LISTENERS
 function displayMembersForm(event) {
-    if (event.target.value >= 5) {
+    if (event.target.value < 3 || event.target.value > 4) {
         document.getElementById('membersError').innerHTML = 'Maximum 4 members per team.';
         return;
     }
@@ -112,6 +112,10 @@ function validate () {
         document.getElementById('emailError').innerHTML = "Email is required!";
         flag = false;
     }
+    if (document.getElementById('noOfMembers').value < 3 || document.getElementById('noOfMembers').value > 4) {
+        document.getElementById('membersError').innerHTML = "Number of members is required!";
+        flag = false;
+    }
     if (document.getElementById('noOfMembers').value === "") {
         document.getElementById('membersError').innerHTML = "Number of members is required!";
         flag = false;
@@ -119,14 +123,14 @@ function validate () {
 
     for(i=0; i<noOfMembers; i++) {
         if (document.getElementById('member' + i).value === "") {
-            document.getElementById('member' + i + 'Error').innerHTML = "Member" + i + " name is required!";
+            document.getElementById('member' + i + 'Error').innerHTML = "Member" + (i+1) + " name is required!";
             flag = false;
         }
         else {
             document.getElementById('member' + i + 'Error').innerHTML = "";
         }
         if (document.getElementById('member' + i + 'Phone').value === "") {
-            document.getElementById('member' + i + 'PhoneError').innerHTML = "Member" + i + " phone is required!";
+            document.getElementById('member' + i + 'PhoneError').innerHTML = "Member" + (i+1) + " phone is required!";
             flag = false;
         }
         else {
