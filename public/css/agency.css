@@ -443,11 +443,11 @@ header.masthead {
     margin-top: 0; }
 
 section#register {
-  background-color: #222222;
   background-image: url("../img/logo.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center; }
+  background-position: center;
+}
   section#register .section-heading {
     color: white; }
   section#register .form-group {
