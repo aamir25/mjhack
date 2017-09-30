@@ -1,0 +1,51 @@
+#headerContainer {
+	padding-top: 100px;
+	padding-bottom: 200px;
+}
+
+.registerButton {
+	margin-bottom: -100px;
+}
+
+.transparentBlackContainer {
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 10px;
+	margin-bottom: 50px;
+}
+
+.blackStroke {
+	text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+}
+
+.size25 {
+	font-size: 25px;
+}
+
+.paddingTop20 {
+	padding-top: 20px;
+}
+
+.lead {
+	color: #4c4a4a;
+}
+
+#timer {
+  // margin-top: 30px;
+  // margin-bottom: 30px;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: #999;
+  letter-spacing: -1px;
+  width: 70%;
+}
+#timer span {
+  font-size: 60px;
+  color: #fff;
+  margin: 0 3px 0 15px;
+  width: 70%;
+}
+#timer span:first-child {
+  margin-left: 0;
+  width: 70%;
+}

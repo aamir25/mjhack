@@ -1,0 +1,87 @@
+.button {
+	height: 50px;
+	width: 200px;
+	top: calc(50vh - 25px);
+	left: calc(50vw - 100px);
+	background-image: none;
+	border: transparent;
+	outline: none;
+	background-color: #fed136;
+	color: white;
+	text-transform: uppercase;
+	font-size: 20px;
+	letter-spacing: 2px;
+	cursor: pointer;
+	transition: all 0.2s ease-out;
+	border-radius: 0px;
+	text-decoration: none;
+	font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.button a {
+	text-decoration: none;
+}
+.button::after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 160px;
+	height: 40px;
+	background-color: black;
+	z-index: -1;
+	left: calc(50% - 80px);
+	top: 10px;
+	opacity: 0.3;
+	filter: blur(5px);
+	transition: all 0.2s ease-out;
+	text-decoration: none;
+}
+.button:hover::after {
+	opacity: 0.5;
+	filter: blur(20px);
+	text-decoration: none;
+	transform: translatey(10px) scalex(1.2);
+}
+.button:active {
+	text-decoration: none;
+	background-color: #dd4b4b;
+}
+.button:active::after {
+	text-decoration: none;
+	opacity: 0.3;
+}
+.loading {
+	border-radius: 50px;
+	width: 50px;
+	text-decoration: none;
+	left: calc(50vw - 25px);
+}
+.loading a {
+	text-decoration: none;
+}
+.button.loading::after {
+	width: 40px;
+	left: 5px;
+	top: 12px;
+	text-decoration: none;
+	border-radius: 100%;
+}
+.spinner {
+	display: block;
+	width: 34px;
+	height: 34px;
+	position: absolute;
+	top: 8px;
+	left: calc(50% - 17px);
+	background: transparent;
+	box-sizing: border-box;
+	border-top: 4px solid white;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	border-radius: 100%;
+	animation: spin 0.6s ease-out infinite;
+	text-decoration: none;
+}
+@keyframes spin {
+	100% {transform: rotate(360deg)}
+}
