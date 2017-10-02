@@ -66,9 +66,10 @@ function submitForm(event) {
         $('.button').toggleClass('loading').html("register");
         // Success modal
         $('#registirationSuccess').modal('show');
+        // Succes modal close
         setTimeout(function() {
             $('#registirationSuccess').modal('hide');
-        }, 3000);
+        }, 5000);
     })
     .catch((error) => {
         console.log(error);
@@ -80,8 +81,6 @@ function submitForm(event) {
         // Error modal
         $('#registirationFail').modal('show');
     });
-
-    console.log(dataRef.key);
 }
 //EVENT LISTENERS END
 
