@@ -1,6 +1,7 @@
 // TEAM DATA
 const data = {
     isCheckedIn: false,
+    isVerified: false,
     isError: false,
     error: null
 };
@@ -52,8 +53,10 @@ function submitForm(event) {
     // Loading animation
     $('.button').toggleClass('loading').html(spinner);
 
+    dataRef = database.ref('participants/').push(data);
+
     //Saving to database
-    database.ref('participants/').push(data)
+    dataRef
     .then((response) => {
         console.log(response);
         data.isCheckedIn = false;
@@ -65,7 +68,7 @@ function submitForm(event) {
         $('#registirationSuccess').modal('show');
         setTimeout(function() {
             $('#registirationSuccess').modal('hide');
-        }, 2000);
+        }, 3000);
     })
     .catch((error) => {
         console.log(error);
@@ -77,6 +80,8 @@ function submitForm(event) {
         // Error modal
         $('#registirationFail').modal('show');
     });
+
+    console.log(dataRef.key);
 }
 //EVENT LISTENERS END
 

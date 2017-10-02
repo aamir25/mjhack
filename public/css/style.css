@@ -29,23 +29,27 @@
 	color: #4c4a4a;
 }
 
-#timer {
-  // margin-top: 30px;
-  // margin-bottom: 30px;
-  padding: 60px 20px;
-  font-family: Arial, sans-serif;
+.timer-container{
+  width: 100%;
+  background: transparent;
+}
+#timer{
   font-size: 20px;
-  color: #999;
-  letter-spacing: -1px;
-  width: 70%;
+  font-family: Arial, sans-serif; 
+  color: #ddd;
 }
-#timer span {
-  font-size: 60px;
+#timer span{
   color: #fff;
-  margin: 0 3px 0 15px;
-  width: 70%;
+  font-size: 60px;
+  margin: 0;
 }
-#timer span:first-child {
-  margin-left: 0;
-  width: 70%;
+@media only screen and (max-width: 768px){
+  #timer{
+    font-size: 12px;
+  }
+  #timer span{
+    color: #fff;
+    font-size: 30px;
+    margin: 0;
+  } 
 }
