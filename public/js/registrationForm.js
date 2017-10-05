@@ -52,6 +52,7 @@ function submitForm(event) {
 
     // Loading animation
     $('.button').toggleClass('loading').html(spinner);
+    $('#registirationSuccess').attr("disabled", true);
 
     dataRef = database.ref('participants/').push(data);
 
@@ -64,12 +65,8 @@ function submitForm(event) {
         data.error = null;
         // Restore $('.button')
         $('.button').toggleClass('loading').html("register");
-        // Success modal
-        $('#registirationSuccess').modal('show');
-        // Succes modal close
-        setTimeout(function() {
-            $('#registirationSuccess').modal('hide');
-        }, 5000);
+        // Success page
+        window.location.href = './success.html?s=true';
     })
     .catch((error) => {
         console.log(error);
